@@ -16,22 +16,20 @@ It sends the followings in each log stream based on [log event](https://docs.aws
 * timestamp
 * message
 
-<br>You can see all data in New Relic Insights like this<br>
-![all data in Insights](https://github.com/harryhiyoshi/CloudWatchLogExporterForNewRelicInsights/blob/master/NewRelicInsights.png "CustomEventCloudWatchLog")
-
-
-**NOTE: The default Event Type is defined 'CustomEventCloudWatchLog'.**<br>
-It creates CustomEventCloudWatchLog as a custom event on your account in New Relic Insights, and then push logs into the event type. You can change the name to re-define EVENT_TYPE in the source.
-
-
+## About Sending Custom Events
 The command to send a custom event to New Relic Insights
 ```
 gzip -c example_events.json | curl -X POST -H "Content-Type: application/json" -H "X-Insert-Key: YOUR_KEY_HERE"
 -H "Content-Encoding: gzip" https://insights-collector.newrelic.com/v1/accounts/YOUR_ACCOUNT_ID/events --data-binary @-
 ```
-
 For more detailed documentation, <br>
-see https://docs.newrelic.com/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api
+please see https://docs.newrelic.com/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api
+
+<br>You can see all data in New Relic Insights like this<br>
+![all data in Insights](https://github.com/harryhiyoshi/CloudWatchLogExporterForNewRelicInsights/blob/master/NewRelicInsights.png "CustomEventCloudWatchLog")
+
+**NOTE: The default Event Type is defined 'CustomEventCloudWatchLog'.**<br>
+It creates CustomEventCloudWatchLog as a custom event on your account in New Relic Insights, and then push logs into the event type. You can change the name to re-define EVENT_TYPE in the source.
 
 ## !! IMPORTANT !! PLEASE NOTE
 **PLEASE DON'T FORGET THE COSTS** for running Lambda functions. Everything related to this tool must be done by your responsibility.
