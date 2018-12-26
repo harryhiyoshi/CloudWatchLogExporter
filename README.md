@@ -26,7 +26,7 @@ For more detailed documentation, <br>
 please see https://docs.newrelic.com/docs/insights/insights-data-sources/custom-data/send-custom-events-event-api
 
 <br>You can see all data in New Relic Insights like this<br>
-![all data in Insights](https://github.com/harryhiyoshi/CloudWatchLogExporterForNewRelicInsights/blob/master/NewRelicInsights.png "CustomEventCloudWatchLog")
+![all data in Insights](https://github.com/harryhiyoshi/CloudWatchLogExporterForNewRelicInsights/blob/master/Insights.png "CustomEventCloudWatchLog")
 
 **NOTE: The default Event Type is defined 'CustomEventCloudWatchLog'.**<br>
 It creates CustomEventCloudWatchLog as a custom event on your account in New Relic Insights, and then push logs into the event type. You can change the name to re-define EVENT_TYPE in the source.
