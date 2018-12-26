@@ -124,7 +124,7 @@ def _send_log_entry(log_entry, context):
             'owner':logs['owner'],
             'logGroup': logs['logGroup'],
             'logId':log['id'],
-            'logCreatedTimestamp': (datetime.fromtimestamp(int(str(log['timestamp'])[:10]))).strftime('%Y%m%d%H%M%S'),
+            'createdTimestamp(UTC)': (datetime.fromtimestamp(int(str(log['timestamp'])[:10]))).strftime('%Y%m%d%H%M%S'),
             'message': log['message']        
         }
         print(data)
