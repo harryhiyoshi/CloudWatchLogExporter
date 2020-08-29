@@ -1,4 +1,4 @@
-# CloudWatch Log Exporter For New Relic Insights
+# CloudWatch Log Exporter
 
 This is a Lambda function receives log entries from CloudWatch Logs
 and pushes them to New Relic Insights as your Custom Event.
